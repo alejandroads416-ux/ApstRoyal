@@ -1,0 +1,157 @@
+/* Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Barra de Navegación */
+header {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul a {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+    color: #0056b3;
+}
+
+/* Sección de Bienvenida (Hero) */
+.hero {
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    background: #333 url('https://source.unsplash.com/1600x900/?technology,abstract') no-repeat center center/cover; /* Imagen de fondo dinámica */
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #007BFF;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* Galería de Proyectos */
+.gallery {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.gallery-item p {
+    padding: 0 1.5rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Pie de Página */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 5%;
+}
