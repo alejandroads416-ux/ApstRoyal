@@ -1,21 +1,18 @@
 /* Estilos Generales */
 body {
-    font-family: 'Poppins', sans-serif;
+    /* ----- ÚNICO CAMBIO REALIZADO AQUÍ ----- */
+    font-family: 'Comfortaa', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
-    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-a {
-    text-decoration: none;
-    color: #007BFF;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
+main {
+    flex-grow: 1;
 }
 
 /* Barra de Navegación */
@@ -38,29 +35,19 @@ nav .logo a {
     font-size: 1.5rem;
     font-weight: 700;
     color: #333;
+    text-decoration: none;
 }
 
-nav ul {
-    display: flex;
-    gap: 2rem;
-}
-
-nav ul a {
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-nav ul a:hover {
-    color: #0056b3;
-}
-
-/* Sección de Bienvenida (Hero) */
+/* Sección Principal (Hero) */
 .hero {
     color: white;
     text-align: center;
-    padding: 100px 20px;
-    background: #333 url('https://source.unsplash.com/1600x900/?technology,abstract') no-repeat center center/cover; /* Imagen de fondo dinámica */
+    padding: 120px 20px;
+    background: #2c3e50 url('https://source.unsplash.com/1600x900/?digital,network') no-repeat center center/cover;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero::after {
@@ -70,88 +57,87 @@ nav ul a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5); /* Un poco más oscuro para mejor contraste */
 }
 
 .hero-text {
     position: relative;
     z-index: 1;
+    max-width: 800px;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 300;
+    margin-bottom: 2rem;
 }
 
 .cta-button {
     display: inline-block;
     background: #007BFF;
     color: #fff;
-    padding: 12px 25px;
+    padding: 15px 35px;
     border-radius: 5px;
-    margin-top: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
     background: #0056b3;
-}
-
-/* Galería de Proyectos */
-.gallery {
-    padding: 50px 5%;
-    text-align: center;
-}
-
-.gallery h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.gallery-item {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.gallery-item h3 {
-    margin: 1rem 0 0.5rem;
-}
-
-.gallery-item p {
-    padding: 0 1.5rem 1.5rem;
-    font-size: 0.9rem;
+    transform: translateY(-3px);
 }
 
 /* Pie de Página */
 footer {
     background: #333;
-    color: #fff;
+    color: #ccc;
     text-align: center;
     padding: 2rem 5%;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007BFF;
+}
+
+/* Estilos para páginas de contenido (Privacidad, Términos) */
+.content-page {
+    max-width: 800px;
+    margin: 4rem auto; /* Centra el contenido y añade espacio arriba/abajo */
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    line-height: 1.8;
+}
+
+.content-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1rem;
+}
+
+.content-page h3 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.content-page ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
