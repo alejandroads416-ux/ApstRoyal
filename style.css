@@ -1,4 +1,3 @@
-/* --- ESTILO COMPLETAMENTE NUEVO --- */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
 
 /* Paleta de Colores Suaves */
@@ -6,7 +5,6 @@
     --bg-color: #f8f9fa;       /* Blanco crema */
     --text-color: #495057;     /* Gris oscuro suave */
     --primary-color: #5d9cec;  /* Azul suave principal */
-    --secondary-color: #a0c4ff;/* Azul muy claro secundario */
     --card-bg: #ffffff;        /* Blanco puro para tarjetas */
     --footer-bg: #343a40;      /* Gris oscuro para footer */
 }
@@ -18,6 +16,11 @@
     box-sizing: border-box;
 }
 
+/* ---- LA SOLUCIÓN ESTÁ AQUÍ ---- */
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Comfortaa', sans-serif;
     background-color: var(--bg-color);
@@ -25,12 +28,14 @@ body {
     line-height: 1.7;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%; /* Asegura que el body ocupe al menos toda la altura de la ventana */
 }
 
 main {
-    flex-grow: 1;
+    flex-grow: 1; /* Permite que el contenido principal crezca y empuje el footer */
 }
+/* ---- FIN DE LA SOLUCIÓN ---- */
+
 
 /* --- BARRA DE NAVEGACIÓN --- */
 .navbar {
@@ -74,11 +79,11 @@ main {
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to right, #e3f2fd, #e8eaf6); /* Gradiente suave */
-    min-height: 50vh;
+    background: linear-gradient(to right, #e3f2fd, #e8eaf6);
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 50vh;
 }
 
 .hero-content {
@@ -101,7 +106,7 @@ main {
     color: white;
     padding: 15px 35px;
     border: none;
-    border-radius: 50px; /* Botón redondeado */
+    border-radius: 50px;
     font-size: 1.1rem;
     font-family: 'Comfortaa', sans-serif;
     font-weight: 700;
@@ -114,7 +119,6 @@ main {
     background-color: #4a8bd9;
     transform: translateY(-3px);
 }
-
 
 /* --- PIE DE PÁGINA --- */
 footer {
