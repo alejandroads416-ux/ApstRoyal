@@ -2,11 +2,11 @@
 
 /* Paleta de Colores Suaves */
 :root {
-    --bg-color: #f8f9fa;       /* Blanco crema */
-    --text-color: #495057;     /* Gris oscuro suave */
-    --primary-color: #5d9cec;  /* Azul suave principal */
-    --card-bg: #ffffff;        /* Blanco puro para tarjetas */
-    --footer-bg: #343a40;      /* Gris oscuro para footer */
+    --bg-color: #f8f9fa;
+    --text-color: #495057;
+    --primary-color: #5d9cec;
+    --card-bg: #ffffff;
+    --footer-bg: #343a40;
 }
 
 /* Estilos Generales */
@@ -16,7 +16,6 @@
     box-sizing: border-box;
 }
 
-/* ---- LA SOLUCIÓN ESTÁ AQUÍ ---- */
 html {
     height: 100%;
 }
@@ -28,13 +27,20 @@ body {
     line-height: 1.7;
     display: flex;
     flex-direction: column;
-    min-height: 100%; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    min-height: 100%;
 }
 
 main {
-    flex-grow: 1; /* Permite que el contenido principal crezca y empuje el footer */
+    flex-grow: 1;
 }
-/* ---- FIN DE LA SOLUCIÓN ---- */
+
+/* ---- NUEVO CÓDIGO PARA ARREGLAR EL INDEX ---- */
+.main-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+}
+/* ---- FIN DEL ARREGLO ---- */
 
 
 /* --- BARRA DE NAVEGACIÓN --- */
@@ -80,14 +86,11 @@ main {
     text-align: center;
     padding: 100px 20px;
     background: linear-gradient(to right, #e3f2fd, #e8eaf6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
 }
 
 .hero-content {
     max-width: 800px;
+    margin: auto; /* Asegura el centrado horizontal */
 }
 
 .hero h1 {
