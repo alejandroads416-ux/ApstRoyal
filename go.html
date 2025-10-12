@@ -2,7 +2,48 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redireccionando...</title>
+  
+  <style>
+    /* 1. Preparamos el contenedor principal */
+    html, body {
+      height: 100%; /* Hacemos que la página ocupe toda la altura de la pantalla */
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f4f4f4; /* Un color de fondo suave */
+    }
+
+    /* 2. Usamos Flexbox para centrar el contenido */
+    body {
+      display: flex; /* Activamos el modo flexible */
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center; /* Centra verticalmente */
+      flex-direction: column; /* Apila los elementos uno encima del otro */
+    }
+
+    /* 3. Mejoramos el estilo del botón y el texto */
+    p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    button {
+      background-color: #007BFF; /* Color azul llamativo */
+      color: white;
+      border: none;
+      padding: 15px 30px; /* Hacemos el botón más grande */
+      font-size: 1.1rem;
+      border-radius: 8px; /* Bordes redondeados */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3; /* Un azul más oscuro al pasar el ratón */
+    }
+  </style>
+  
   <script>
     function goNow() {
       window.location.href = "https://app.apuestasroyal.com/registro";
