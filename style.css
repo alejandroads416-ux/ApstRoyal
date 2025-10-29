@@ -164,3 +164,66 @@ footer p {
     list-style-type: disc;
     padding-left: 20px;
 }
+
+/* ===============================================
+--- NUEVOS ESTILOS PARA LA PÁGINA DE CAPTCHA --- 
+===============================================
+*/
+
+.captcha-container {
+    max-width: 500px;
+    margin: 4rem auto; /* Centrado vertical y horizontal */
+    padding: 2.5rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.captcha-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.captcha-container p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.captcha-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* Espacio entre el check y el texto */
+    padding: 1.25rem;
+    background-color: var(--bg-color); /* Fondo gris claro */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+.captcha-box input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.captcha-box label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Estilo para el botón deshabilitado */
+.cta-button.disabled {
+    background-color: #bdc3c7; /* Color gris */
+    color: #6c757d;
+    cursor: not-allowed; /* Cambia el cursor */
+    pointer-events: none; /* Esto deshabilita el clic en el enlace <a> */
+}
+
+.cta-button.disabled:hover {
+    background-color: #bdc3c7; /* Mantiene el color en hover */
+    transform: none; /* Sin animación en hover */
+}
