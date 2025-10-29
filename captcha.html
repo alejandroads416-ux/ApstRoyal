@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación - Portales Digitales 2025</title>
+    <meta name="robots" content="noindex,nofollow"> <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-logo">
+            <a href="index.html">PortalesDigitales2025</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="terms.html">Términos</a></li>
+            <li><a href="privacy.html">Privacidad</a></li>
+        </ul>
+    </header>
+
+    <main class="main-home">
+        <div class="captcha-container">
+            <h2>Verificación Requerida</h2>
+            <p>Para continuar, por favor confirma que no eres un robot.</p>
+            
+            <div class="captcha-box">
+                <input type="checkbox" id="captcha-check">
+                <label for="captcha-check">No soy un robot</label>
+            </div>
+            
+            <a href="go.html" id="captcha-submit" class="cta-button disabled">Continuar</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PortalesDigitales2025.com • Solo para mayores de 18 años.</p>
+    </footer>
+
+    <script>
+        const checkbox = document.getElementById('captcha-check');
+        const submitButton = document.getElementById('captcha-submit');
+
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                // Si está marcado, quita la clase 'disabled'
+                submitButton.classList.remove('disabled');
+            } else {
+                // Si no está marcado, añade la clase 'disabled'
+                submitButton.classList.add('disabled');
+            }
+        });
+
+        // Previene el clic en el enlace si está deshabilitado
+        submitButton.addEventListener('click', function(event) {
+            if (submitButton.classList.contains('disabled')) {
+                event.preventDefault(); // Detiene la navegación
+                alert('Por favor, marca la casilla para continuar.');
+            }
+        });
+    </script>
+
+</body>
+</html>
